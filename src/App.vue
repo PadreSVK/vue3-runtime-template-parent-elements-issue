@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import VRuntimeTemplate  from "vue3-runtime-template";
+let stringComponent = "<WelcomeItem></WelcomeItem>"
+
 </script>
 
 <template>
@@ -8,6 +11,7 @@ import TheWelcome from './components/TheWelcome.vue'
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
+      <v-runtime-template :template="stringComponent" ></v-runtime-template>
       <HelloWorld msg="You did it!" />
     </div>
   </header>
